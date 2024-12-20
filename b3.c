@@ -1,20 +1,25 @@
 #include<stdio.h>
 
 int main(){
-    int array[5]={1,3,5,7,9};
-    int count = 0;
-    for (int i = 0; i < 5; i++)
+    int n ; 
+    printf("nhap so n: ");
+    scanf("%d", &n);
+    int arr2d[n][n];
+    for (int i = 0; i < n; i++)
     {
-        if (array[i]%2==0)
+        for (int j = 0; j < n; j++)
         {
-            printf("%d ", array[i]);
-            count++;
+            printf("phan tu [%d][%d]: ", i,j);
+            scanf("%d", &arr2d[i][j]);
         }
         
-    }if (count == 0)
-    {
-        printf("mang khong co so chan");
     }
-    
-    
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%d ", arr2d[i][j]);
+        }
+        printf("\n");
+    }
 }

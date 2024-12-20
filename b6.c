@@ -1,26 +1,22 @@
 #include<stdio.h>
 
 int main(){
-    int arr[5]={1,2,3,4,5};
-    int arr2[5];
-
-    for (int i = 0; i < 5; i++)
+    int arr2d[4][4]={{2,10,3,4},{14,52,6,7},{74,88,59,10},{1,2,3,4}};
+    int sum = 0;
+    for (int i = 0; i < 4; i++)
     {
-        if (arr[i] % 2 != 0)
+        for (int j = 0; j < 4; j++)
         {
-            int j = arr[i] + 2;
-            arr2[i] = j;
+            if (i == j)
+            {
+                printf("%d\t", arr2d[i][j]);
+                sum += arr2d[i][j];
+            }else{
+                printf("\t");
+            }
         }
-        if (arr[i] % 2 == 0)
-        {
-            int j = arr[i] + 3;
-            arr2[i] = j;
-        }
+        printf("\n\n\n");
     }
-    printf("{");
-    for (int i = 0; i < 5; i++)
-    {
-        printf("%d,", arr2[i]);
-    }
-    printf("}");
+    printf("tong duong cheo chinh la: %d", sum);
+    return 0;
 }

@@ -1,22 +1,26 @@
 #include<stdio.h>
 
 int main(){
-    int array[]={4,2,6,1,8,6,4,8,9};
-    int length = sizeof(array)/sizeof(array[0]);
-    int max = array[0];
-    int min = array[0];
-    for (int i = 0; i < length; i++)
+    int arr2d[3][3]={{2,10,3},{14,52,6},{74,88,59}};
+    int sum = 0;
+    for (int i = 0; i < 3; i++)
     {
-        if (array[i] > max)
+        for (int j = 0; j < 3; j++)
         {
-            max = array[i];
+            printf("%d\t", arr2d[i][j]);
         }
-        if (array[i] < min)
+        printf("\n\n\n");
+    }
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
         {
-            min = array[i];
+            if (i ==0 || i == 2 || j == 0 || j == 2)
+            {
+                sum += arr2d[i][j];
+            }
         }
         
     }
-    printf("gia tri lon nhat la: %d\n", max);
-    printf("gia tri nho nhat la: %d", min);
+    printf("tong bien la: %d", sum);
 }

@@ -1,24 +1,22 @@
 #include<stdio.h>
 
 int main(){
-    int n;
-    int arr[n];
-    scanf("%d", &n);
-    int index;
-    for (int i = 0; i < n; i++)
+    int arr2d[4][4]={{2,10,3,4},{14,52,6,7},{74,88,59,10},{1,2,3,4}};
+    int sum = 0;
+    for (int i = 0; i < 4; i++)
     {
-        do
+        for (int j = 0; j < 4; j++)
         {
-            printf("phan tu thu %d: ",i);
-            scanf("%d", &index);
-            arr[i] = index;
-        } while (index % 2 == 0);
-        
-        
+            if (i + j==3)
+            {
+                printf("%d\t", arr2d[i][j]);
+                sum += arr2d[i][j];
+            }else{
+                printf("\t");
+            }
+        }
+        printf("\n\n\n");
     }
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    
+    printf("tong duong cheo phu la: %d", sum);
+    return 0;
 }
